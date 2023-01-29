@@ -1,0 +1,8 @@
+services:
+  buf:
+    build: ./
+    volumes:
+      - type: bind
+        source: ./
+        target: /app
+    command: buf generate buf.build/bufbuild/eliza
